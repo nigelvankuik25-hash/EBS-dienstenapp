@@ -61,7 +61,7 @@ function zoekDienst() {
 rittenHtml =
 "<h3>🚌 Ritten</h3><ul>" +
 dienst.ritten.map(r =>
-    `<li>${r.vertrek} → ${r.aankomst} | Lijn ${r.lijn}</li>`
+    `<li><b>${r.lijn}</b> | ${r.vertrek} → ${r.aankomst}</li>`
 ).join("") +
 "</ul>";
       }
