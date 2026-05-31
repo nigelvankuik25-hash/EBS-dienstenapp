@@ -1,36 +1,6 @@
 {
   "4001": {
     "start": "04:34",
-    "einde": "12:25"
-  },
-  "5001": {
-    "start": "05:35",
-    "einde": "11:51"
-  },
-  "6010": {
-    "start": "14:04",
-    "einde": "22:53"
-  },
-  "4013": {
-  "start": "05:10",
-  "einde": "13:23",
-  "podwagen": false,
-  "voertuig": "Elektrisch 12,2m M-net",
-  "pauzes": [
-    "06:50-07:15",
-    "10:00-10:36"
-  ],
-  "ritten": [
-    {"lijn":"65","vertrek":"05:20","aankomst":"06:05","van":"Zdm Vli","naar":"Bev Sta"},
-    {"lijn":"65","vertrek":"06:08","aankomst":"06:50","van":"Bev Sta","naar":"Zdm Vli"},
-    {"lijn":"63","vertrek":"08:57","aankomst":"09:28","van":"Zdm Vli","naar":"Ass Fes"},
-    {"lijn":"395","vertrek":"10:36","aankomst":"10:48","van":"Zdm Vli","naar":"Asd Std"},
-    {"lijn":"391","vertrek":"11:21","aankomst":"11:56","van":"Zdm Zmc","naar":"Asd CS"}
-  ]
-  },
-  {
-  "4001": {
-    "start": "04:34",
     "einde": "12:25",
     "voertuig": "Elektrisch 12,2m M-net",
     "podwagen": false,
@@ -117,10 +87,45 @@
       {"lijn":"391","vertrek":"19:30","aankomst":"20:12"}
     ]
   },
+
   "4005": {
     "start": "04:54",
     "einde": "12:07",
     "voertuig": "Elektrisch 13,5m R-net",
     "podwagen": false,
-    "
+    "pauzes": [
+      "07:04-07:36",
+      "08:51-09:48"
+    ],
+    "ritten": [
+      {"lijn":"394","vertrek":"05:04","aankomst":"05:19"},
+      {"lijn":"394","vertrek":"05:22","aankomst":"05:53"},
+      {"lijn":"394","vertrek":"05:56","aankomst":"06:28"},
+      {"lijn":"394","vertrek":"06:31","aankomst":"07:04"},
+      {"lijn":"394","vertrek":"07:36","aankomst":"08:13"},
+      {"lijn":"394","vertrek":"08:16","aankomst":"08:51"},
+      {"lijn":"69","vertrek":"09:48","aankomst":"10:43"},
+      {"lijn":"69","vertrek":"10:45","aankomst":"11:39"},
+      {"lijn":"111","vertrek":"11:45","aankomst":"12:00"}
+    ]
+  },
+  
+  "4013": {
+  "start": "05:10",
+  "einde": "13:23",
+  "podwagen": false,
+  "voertuig": "Elektrisch 12,2m M-net",
+  "pauzes": [
+    "06:50-07:15",
+    "10:00-10:36"
+  ],
+  "ritten": [
+    {"lijn":"65","vertrek":"05:20","aankomst":"06:05","van":"Zdm Vli","naar":"Bev Sta"},
+    {"lijn":"65","vertrek":"06:08","aankomst":"06:50","van":"Bev Sta","naar":"Zdm Vli"},
+    {"lijn":"63","vertrek":"08:57","aankomst":"09:28","van":"Zdm Vli","naar":"Ass Fes"},
+    {"lijn":"395","vertrek":"10:36","aankomst":"10:48","van":"Zdm Vli","naar":"Asd Std"},
+    {"lijn":"391","vertrek":"11:21","aankomst":"11:56","van":"Zdm Zmc","naar":"Asd CS"}
+  ]
+  }
+}
 
