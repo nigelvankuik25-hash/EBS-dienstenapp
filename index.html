@@ -49,15 +49,6 @@ function berekenMinuten(start, einde) {
     const [sh, sm] = start.split(":").map(Number);
     const [eh, em] = einde.split(":").map(Number);
 
-    const startMin = sh * 60 + sm;
-    const eindMin = eh * 60 + em;
-
-    return eindMin - startMin;
-  function berekenMinuten(start, einde){
-
-    const [sh, sm] = start.split(":").map(Number);
-    const [eh, em] = einde.split(":").map(Number);
-
     return (eh * 60 + em) - (sh * 60 + sm);
 }
 }
