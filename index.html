@@ -68,11 +68,18 @@ function zoekDienst() {
     let rittenHtml = "";
       if(dienst.ritten){
 rittenHtml =
-"<h3>🚌 Ritten</h3><ul>" +
+"<h3>🚌 Ritten</h3>" +
+"<table border='1' style='width:100%;border-collapse:collapse'>" +
+"<tr><th>Lijn</th><th>Vertrek</th><th>Aankomst</th><th>Duur</th></tr>" +
 dienst.ritten.map(r =>
-  `<li><b>${r.lijn}</b> | ${r.vertrek} → ${r.aankomst} | ${berekenMinuten(r.vertrek, r.aankomst)} min</li>`
+`<tr>
+<td>${r.lijn}</td>
+<td>${r.vertrek}</td>
+<td>${r.aankomst}</td>
+<td>${berekenMinuten(r.vertrek, r.aankomst)} min</td>
+</tr>`
 ).join("") +
-"</ul>";
+"</table>";
       }
     if(dienst.pauzes){
         pauzesHtml =
