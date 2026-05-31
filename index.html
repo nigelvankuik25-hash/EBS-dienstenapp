@@ -5,7 +5,7 @@
 <title>EBS DienstApp</title><style>
 body{
     font-family:Arial,sans-serif;
-    max-width:900px;
+    max-width:1200px;
     margin:auto;
     padding:20px;
 }
@@ -29,7 +29,8 @@ button{
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:10px;
+    margin-top:15px;
+    font-size:14px;
 }
 
 th,td{
@@ -41,6 +42,18 @@ th,td{
 th{
     background:#f2f2f2;
 }
+
+.pauze{
+    background:#fff8dc;
+}
+
+.mat{
+    background:#eef6ff;
+}
+
+.overdracht{
+    background:#f3f3f3;
+}
 </style></head>
 <body><h1>🚍 EBS DienstApp</h1><input id="dienstnummer" placeholder="Bijv. 4001">
 <button onclick="zoekDienst()">Zoek</button><div id="resultaat"></div><script>
@@ -48,21 +61,23 @@ th{
 let diensten = {};
 
 async function laadDiensten() {
-    try {
+
+    try{
         const response = await fetch("diensten.json");
         diensten = await response.json();
         console.log("Diensten geladen");
-    } catch(error) {
-        console.error("Fout bij laden diensten.json", error);
+    }catch(error){
+        console.error(error);
     }
+
 }
 
 laadDiensten();
 
-function berekenMinuten(start, einde){
+function berekenMinuten(start,einde){
 
-    const [sh, sm] = start.split(":").map(Number);
-    const [eh, em] = einde.split(":").map(Number);
+    const [sh,sm] = start.split(":").map(Number);
+    const [eh,em] = einde.split(":").map(Number);
 
     return (eh * 60 + em) - (sh * 60 + sm);
 }
@@ -86,60 +101,76 @@ function zoekDienst(){
         return;
     }
 
-    let pauzesHtml = "";
-    let lijnenHtml = "";
-    let rittenHtml = "";
+    let activiteitenHtml = "";
 
-    if(dienst.pauzes){
+    if(dienst.activiteiten){
 
-        pauzesHtml =
-        "<h3>☕ Pauzes</h3><ul>" +
-        dienst.pauzes.map(p => `<li>${p}</li>`).join("") +
-        "</ul>";
-    }
-
-    if(dienst.lijnen){
-
-        lijnenHtml =
-        "<h3>🚌 Lijnen</h3><ul>" +
-        dienst.lijnen.map(l => `<li>${l}</li>`).join("") +
-        "</ul>";
-    }
-
-    if(dienst.ritten){
-
-        rittenHtml =
+        activiteitenHtml =
         `
-        <h3>🚌 Ritten</h3>
+        <h3>📋 Dienstverloop</h3>
 
         <table>
+
             <tr>
+                <th>Type</th>
                 <th>Lijn</th>
                 <th>Omloop</th>
+                <th>Ritnr</th>
+                <th>Voertuig</th>
+                <th>Vertrek</th>
                 <th>Van</th>
                 <th>Naar</th>
-                <th>Vertrek</th>
                 <th>Aankomst</th>
                 <th>Duur</th>
+                <th>Opmerking</th>
             </tr>
 
-            ${dienst.ritten.map(r => `
-            <tr>
-                <td>${r.lijn || "-"}</td>
-                <td>${r.omloop || "-"}</td>
-                <td>${r.van || "-"}</td>
-                <td>${r.naar || "-"}</td>
-                <td>${r.vertrek || "-"}</td>
-                <td>${r.aankomst || "-"}</td>
-                <td>${berekenMinuten(r.vertrek, r.aankomst)} min</td>
-            </tr>
-            `).join("")}
+            ${dienst.activiteiten.map(a => {
+
+                let css = "";
+
+                if(a.type === "pauze"){
+                    css = "pauze";
+                }
+
+                if(a.type === "mat"){
+                    css = "mat";
+                }
+
+                if(
+                    a.type === "overname" ||
+                    a.type === "afgifte"
+                ){
+                    css = "overdracht";
+                }
+
+                return `
+                <tr class="${css}">
+                    <td>${a.type || ""}</td>
+                    <td>${a.lijn || ""}</td>
+                    <td>${a.omloop || ""}</td>
+                    <td>${a.ritnr || ""}</td>
+                    <td>${a.voertuig || ""}</td>
+                    <td>${a.vertrek || ""}</td>
+                    <td>${a.van || ""}</td>
+                    <td>${a.naar || ""}</td>
+                    <td>${a.aankomst || ""}</td>
+                    <td>${
+                        a.vertrek && a.aankomst
+                        ? berekenMinuten(a.vertrek,a.aankomst) + " min"
+                        : ""
+                    }</td>
+                    <td>${a.opmerking || ""}</td>
+                </tr>
+                `;
+            }).join("")}
+
         </table>
         `;
     }
 
     const totaalMinuten =
-        berekenMinuten(dienst.start, dienst.einde);
+        berekenMinuten(dienst.start,dienst.einde);
 
     document.getElementById("resultaat").innerHTML =
     `
@@ -147,29 +178,27 @@ function zoekDienst(){
 
         <h2>Dienst ${nummer}</h2>
 
-        <p>⏰ <b>Start:</b> ${dienst.start}</p>
+        <p><b>⏰ Start:</b> ${dienst.start}</p>
 
-        <p>🏁 <b>Einde:</b> ${dienst.einde}</p>
+        <p><b>🏁 Einde:</b> ${dienst.einde}</p>
 
         <p>
-        ⏱️ <b>Dienstduur:</b>
-        ${Math.floor(totaalMinuten / 60)}u
-        ${totaalMinuten % 60}m
+            <b>⏱️ Dienstduur:</b>
+            ${Math.floor(totaalMinuten / 60)}u
+            ${totaalMinuten % 60}m
         </p>
 
         <p>
-        🔋 <b>Startvoertuig:</b>
-        ${dienst.startVoertuig || dienst.voertuig || "-"}
+            <b>🔋 Startvoertuig:</b>
+            ${dienst.startVoertuig || "-"}
         </p>
 
         <p>
-        🚗 <b>Podwagen nodig:</b>
-        ${dienst.podwagen ? "Ja" : "Nee"}
+            <b>🚗 Podwagen nodig:</b>
+            ${dienst.podwagen ? "Ja" : "Nee"}
         </p>
 
-        ${pauzesHtml}
-        ${lijnenHtml}
-        ${rittenHtml}
+        ${activiteitenHtml}
 
     </div>
     `;
