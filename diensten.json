@@ -14,15 +14,18 @@
   "4013": {
   "start": "05:10",
   "einde": "13:23",
+  "podwagen": false,
+  "voertuig": "Elektrisch 12,2m M-net",
   "pauzes": [
     "06:50-07:15",
     "10:00-10:36"
   ],
-  "lijnen": [
-    "65",
-    "63",
-    "395",
-    "391"
+  "ritten": [
+    {"lijn":"65","vertrek":"05:20","aankomst":"06:05","van":"Zdm Vli","naar":"Bev Sta"},
+    {"lijn":"65","vertrek":"06:08","aankomst":"06:50","van":"Bev Sta","naar":"Zdm Vli"},
+    {"lijn":"63","vertrek":"08:57","aankomst":"09:28","van":"Zdm Vli","naar":"Ass Fes"},
+    {"lijn":"395","vertrek":"10:36","aankomst":"10:48","van":"Zdm Vli","naar":"Asd Std"},
+    {"lijn":"391","vertrek":"11:21","aankomst":"11:56","van":"Zdm Zmc","naar":"Asd CS"}
   ]
   }
 }
