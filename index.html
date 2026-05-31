@@ -53,6 +53,13 @@ function berekenMinuten(start, einde) {
     const eindMin = eh * 60 + em;
 
     return eindMin - startMin;
+  function berekenMinuten(start, einde){
+
+    const [sh, sm] = start.split(":").map(Number);
+    const [eh, em] = einde.split(":").map(Number);
+
+    return (eh * 60 + em) - (sh * 60 + sm);
+}
 }
 function zoekDienst() {
 
@@ -67,7 +74,8 @@ function zoekDienst() {
     let lijnenHtml = "";
     let rittenHtml = "";
       if(dienst.ritten){
-rittenHtml =
+
+        rittenHtml =
 "<h3>🚌 Ritten</h3>" +
 "<table border='1' style='width:100%;border-collapse:collapse'>" +
 "<tr><th>Lijn</th><th>Vertrek</th><th>Aankomst</th><th>Duur</th></tr>" +
