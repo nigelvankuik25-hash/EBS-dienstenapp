@@ -54,14 +54,36 @@ function zoekDienst() {
 
     if(dienst){
 
-        document.getElementById("resultaat").innerHTML =
-        `
-        <div class="card">
-            <h2>Dienst ${nummer}</h2>
-            <p><b>Start:</b> ${dienst.start}</p>
-            <p><b>Einde:</b> ${dienst.einde}</p>
-        </div>
-        `;
+    let pauzesHtml = "";
+    let lijnenHtml = "";
+
+    if(dienst.pauzes){
+        pauzesHtml =
+        "<h3>Pauzes</h3><ul>" +
+        dienst.pauzes.map(p => `<li>${p}</li>`).join("") +
+        "</ul>";
+    }
+
+    if(dienst.lijnen){
+        lijnenHtml =
+        "<h3>Lijnen</h3><ul>" +
+        dienst.lijnen.map(l => `<li>${l}</li>`).join("") +
+        "</ul>";
+    }
+
+    document.getElementById("resultaat").innerHTML =
+    `
+    <div class="card">
+        <h2>Dienst ${nummer}</h2>
+
+        <p><b>Start:</b> ${dienst.start}</p>
+        <p><b>Einde:</b> ${dienst.einde}</p>
+
+        ${pauzesHtml}
+        ${lijnenHtml}
+
+    </div>
+    `;
 
     }else{
 
