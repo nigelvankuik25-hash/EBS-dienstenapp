@@ -82,6 +82,7 @@ function zoekDienst() {
 dienst.ritten.map(r =>
 `<tr>
 <td>${r.lijn}</td>
+<td>${r.bestemming || "-"}</td>
 <td>${r.vertrek}</td>
 <td>${r.aankomst}</td>
 <td>${berekenMinuten(r.vertrek, r.aankomst)} min</td>
