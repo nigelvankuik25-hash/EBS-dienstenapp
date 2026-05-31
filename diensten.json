@@ -1,178 +1,86 @@
-{
-  "4001": {
+"4001": {
   "start": "04:34",
   "einde": "12:25",
-  "voertuig": "Elektrisch 12,2m M-net",
+  "dienstduur": "7u51",
+  "startVoertuig": "Elektrisch 12,2m M-net",
   "podwagen": false,
-
   "pauzes": [
     "06:18-06:51",
     "09:36-10:10"
   ],
-
   "ritten": [
     {
       "lijn": "111",
-      "bestemming": "Amsterdam Centraal",
+      "omloop": "1000",
+      "van": "Monnickendam",
+      "naar": "Zaandam Station",
       "vertrek": "05:14",
       "aankomst": "06:18"
     },
     {
       "lijn": "69",
-      "bestemming": "Station Sloterdijk",
+      "omloop": "1702",
+      "van": "Zaandam Station",
+      "naar": "Assendelft Station",
       "vertrek": "06:51",
       "aankomst": "07:43"
     },
     {
       "lijn": "69",
-      "bestemming": "Purmerend Tramplein",
+      "omloop": "1009",
+      "van": "Assendelft Station",
+      "naar": "Zaandam Station",
       "vertrek": "07:45",
       "aankomst": "08:42"
     },
     {
       "lijn": "111",
-      "bestemming": "Amsterdam Centraal",
+      "omloop": "1031",
+      "van": "Zaandam Station",
+      "naar": "Amsterdam Noord",
       "vertrek": "08:45",
       "aankomst": "09:24"
     },
     {
       "lijn": "395",
-      "bestemming": "Amsterdam Centraal",
+      "omloop": "1803",
+      "van": "Zaandam Vlinder",
+      "naar": "Zaandam ZMC",
       "vertrek": "10:20",
       "aankomst": "10:29"
     },
     {
       "lijn": "395",
-      "bestemming": "Zaandam Station",
+      "omloop": "1050",
+      "van": "Zaandam ZMC",
+      "naar": "Amsterdam Sloterdijk",
       "vertrek": "10:40",
       "aankomst": "11:03"
     },
     {
       "lijn": "395",
-      "bestemming": "Amsterdam Centraal",
+      "omloop": "1049",
+      "van": "Amsterdam Sloterdijk",
+      "naar": "Zaandam ZMC",
       "vertrek": "11:06",
       "aankomst": "11:29"
     },
     {
       "lijn": "395",
-      "bestemming": "Zaandam Station",
+      "omloop": "1058",
+      "van": "Zaandam ZMC",
+      "naar": "Amsterdam Sloterdijk",
       "vertrek": "11:40",
       "aankomst": "12:03"
     },
     {
       "lijn": "395",
-      "bestemming": "Amsterdam Centraal",
+      "omloop": "1057",
+      "van": "Amsterdam Sloterdijk",
+      "naar": "Zaandam Vlinder",
       "vertrek": "12:06",
       "aankomst": "12:18"
     }
   ]
-  },
-
-  "4002": {
-    "start": "13:03",
-    "einde": "21:25",
-    "voertuig": "Elektrisch 13,5m R-net",
-    "podwagen": false,
-    "pauzes": [
-      "15:35-16:19",
-      "18:22-18:47"
-    ],
-    "ritten": [
-      {"lijn":"391","vertrek":"13:23","aankomst":"14:11"},
-      {"lijn":"391","vertrek":"14:17","aankomst":"14:51"},
-      {"lijn":"395","vertrek":"14:56","aankomst":"15:18"},
-      {"lijn":"395","vertrek":"15:21","aankomst":"15:35"},
-      {"lijn":"111","vertrek":"16:19","aankomst":"17:10"},
-      {"lijn":"111","vertrek":"17:13","aankomst":"18:22"},
-      {"lijn":"64","vertrek":"18:47","aankomst":"19:10"},
-      {"lijn":"64","vertrek":"19:12","aankomst":"19:39"},
-      {"lijn":"64","vertrek":"19:55","aankomst":"20:07"},
-      {"lijn":"64","vertrek":"20:08","aankomst":"20:44"},
-      {"lijn":"64","vertrek":"20:45","aankomst":"21:12"}
-    ]
-  },
-
-  "4003": {
-    "start": "04:45",
-    "einde": "12:24",
-    "voertuig": "Elektrisch 12,2m M-net",
-    "podwagen": false,
-    "pauzes": [
-      "06:48-07:16",
-      "09:50-10:18"
-    ],
-    "ritten": [
-      {"lijn":"111","vertrek":"04:55","aankomst":"05:41"},
-      {"lijn":"111","vertrek":"05:44","aankomst":"06:48"},
-      {"lijn":"394","vertrek":"07:16","aankomst":"07:53"},
-      {"lijn":"394","vertrek":"07:56","aankomst":"08:31"},
-      {"lijn":"394","vertrek":"08:37","aankomst":"09:13"},
-      {"lijn":"394","vertrek":"09:16","aankomst":"09:50"},
-      {"lijn":"69","vertrek":"10:18","aankomst":"11:13"},
-      {"lijn":"69","vertrek":"11:15","aankomst":"12:09"}
-    ]
-  },
-
-  "4004": {
-    "start": "13:07",
-    "einde": "20:29",
-    "voertuig": "Elektrisch 12,2m M-net",
-    "podwagen": true,
-    "pauzes": [
-      "16:01-16:28",
-      "17:33-18:17"
-    ],
-    "ritten": [
-      {"lijn":"65","vertrek":"13:18","aankomst":"14:05"},
-      {"lijn":"65","vertrek":"14:08","aankomst":"14:53"},
-      {"lijn":"63","vertrek":"14:56","aankomst":"15:29"},
-      {"lijn":"63","vertrek":"15:30","aankomst":"16:01"},
-      {"lijn":"63","vertrek":"16:28","aankomst":"17:01"},
-      {"lijn":"63","vertrek":"17:02","aankomst":"17:33"},
-      {"lijn":"391","vertrek":"18:17","aankomst":"18:42"},
-      {"lijn":"391","vertrek":"18:45","aankomst":"19:26"},
-      {"lijn":"391","vertrek":"19:30","aankomst":"20:12"}
-    ]
-  },
-
-  "4005": {
-    "start": "04:54",
-    "einde": "12:07",
-    "voertuig": "Elektrisch 13,5m R-net",
-    "podwagen": false,
-    "pauzes": [
-      "07:04-07:36",
-      "08:51-09:48"
-    ],
-    "ritten": [
-      {"lijn":"394","vertrek":"05:04","aankomst":"05:19"},
-      {"lijn":"394","vertrek":"05:22","aankomst":"05:53"},
-      {"lijn":"394","vertrek":"05:56","aankomst":"06:28"},
-      {"lijn":"394","vertrek":"06:31","aankomst":"07:04"},
-      {"lijn":"394","vertrek":"07:36","aankomst":"08:13"},
-      {"lijn":"394","vertrek":"08:16","aankomst":"08:51"},
-      {"lijn":"69","vertrek":"09:48","aankomst":"10:43"},
-      {"lijn":"69","vertrek":"10:45","aankomst":"11:39"},
-      {"lijn":"111","vertrek":"11:45","aankomst":"12:00"}
-    ]
-  },
-  
-  "4013": {
-  "start": "05:10",
-  "einde": "13:23",
-  "podwagen": false,
-  "voertuig": "Elektrisch 12,2m M-net",
-  "pauzes": [
-    "06:50-07:15",
-    "10:00-10:36"
-  ],
-  "ritten": [
-    {"lijn":"65","vertrek":"05:20","aankomst":"06:05","van":"Zdm Vli","naar":"Bev Sta"},
-    {"lijn":"65","vertrek":"06:08","aankomst":"06:50","van":"Bev Sta","naar":"Zdm Vli"},
-    {"lijn":"63","vertrek":"08:57","aankomst":"09:28","van":"Zdm Vli","naar":"Ass Fes"},
-    {"lijn":"395","vertrek":"10:36","aankomst":"10:48","van":"Zdm Vli","naar":"Asd Std"},
-    {"lijn":"391","vertrek":"11:21","aankomst":"11:56","van":"Zdm Zmc","naar":"Asd CS"}
-  ]
-  }
 }
 
