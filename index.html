@@ -56,7 +56,15 @@ function zoekDienst() {
 
     let pauzesHtml = "";
     let lijnenHtml = "";
-
+    let rittenHtml = "";
+      if(dienst.ritten){
+rittenHtml =
+"<h3>🚌 Ritten</h3><ul>" +
+dienst.ritten.map(r =>
+    `<li>${r.vertrek} → ${r.aankomst} | Lijn ${r.lijn}</li>`
+).join("") +
+"</ul>";
+      }
     if(dienst.pauzes){
         pauzesHtml =
         "<h3>Pauzes</h3><ul>" +
@@ -87,6 +95,7 @@ ${dienst.podwagen ? "Ja" : "Nee"}
 
 ${pauzesHtml}
 ${lijnenHtml}
+${rittenHtml}
 
     </div>
     `;
