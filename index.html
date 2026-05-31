@@ -120,8 +120,8 @@ dienst.ritten.forEach(r => {
 ${Math.floor(berekenMinuten(dienst.start, dienst.einde) / 60)}u
 ${berekenMinuten(dienst.start, dienst.einde) % 60}m
 </p>
+<p>🔋 <b>Startvoertuig:</b> ${dienst.startVoertuig || dienst.voertuig}</p>
 
-<p>🔋 <b>Voertuig:</b> ${dienst.voertuig || "Onbekend"}</p>
 
 <p>🚗 <b>Podwagen nodig:</b>
 ${dienst.podwagen ? "Ja" : "Nee"}
