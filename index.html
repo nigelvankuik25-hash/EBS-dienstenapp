@@ -76,11 +76,17 @@ function zoekDienst() {
     <div class="card">
         <h2>Dienst ${nummer}</h2>
 
-        <p><b>Start:</b> ${dienst.start}</p>
-        <p><b>Einde:</b> ${dienst.einde}</p>
+        <p>⏰ <b>Start:</b> ${dienst.start}</p>
+<p>🏁 <b>Einde:</b> ${dienst.einde}</p>
 
-        ${pauzesHtml}
-        ${lijnenHtml}
+<p>🔋 <b>Voertuig:</b> ${dienst.voertuig || "Onbekend"}</p>
+
+<p>🚗 <b>Podwagen nodig:</b>
+${dienst.podwagen ? "Ja" : "Nee"}
+</p>
+
+${pauzesHtml}
+${lijnenHtml}
 
     </div>
     `;
