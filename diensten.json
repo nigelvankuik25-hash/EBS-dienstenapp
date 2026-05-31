@@ -1,88 +1,233 @@
-{
 "4001": {
   "start": "04:34",
   "einde": "12:25",
-  "dienstduur": "7u51",
-  "startVoertuig": "Elektrisch 12,2m M-net",
-  "podwagen": false,
-  "pauzes": [
-    "06:18-06:51",
-    "09:36-10:10"
-  ],
-  "ritten": [
+  "activiteiten": [
+
     {
+      "type": "tekst",
+      "omschrijving": "Meenemen Elektrisch 12,2m M-net"
+    },
+
+    {
+      "type": "opstaptijd",
+      "van": "04:34",
+      "naar": "04:40"
+    },
+
+    {
+      "type": "stekkeren",
+      "van": "04:40",
+      "naar": "04:41"
+    },
+
+    {
+      "type": "mat",
+      "voertuig": "MAT 1701",
+      "vertrek": "04:41",
+      "aankomst": "05:14",
+      "van": "Zaandam Garage",
+      "naar": "Monnickendam"
+    },
+
+    {
+      "type": "rit",
       "lijn": "111",
       "omloop": "1000",
-      "van": "Monnickendam",
-      "naar": "Zaandam Station",
       "vertrek": "05:14",
-      "aankomst": "06:18"
+      "aankomst": "06:18",
+      "van": "Monnickendam",
+      "naar": "Zaandam Station"
     },
+
     {
+      "type": "pauze",
+      "vertrek": "06:18",
+      "aankomst": "06:51"
+    },
+
+    {
+      "type": "tekst",
+      "omschrijving": "Elektrisch 12,2m M-net voor dienst 4047"
+    },
+
+    {
+      "type": "tekst",
+      "omschrijving": "Elektrisch 12,2m M-net van dienst 4003"
+    },
+
+    {
+      "type": "rit",
       "lijn": "69",
       "omloop": "1702",
-      "van": "Zaandam Station",
-      "naar": "Assendelft Station",
+      "ritnummer": "1006",
       "vertrek": "06:51",
-      "aankomst": "07:43"
+      "aankomst": "07:43",
+      "van": "Zaandam Station",
+      "naar": "Assendelft Station"
     },
+
     {
+      "type": "rit",
       "lijn": "69",
       "omloop": "1009",
-      "van": "Assendelft Station",
-      "naar": "Zaandam Station",
       "vertrek": "07:45",
-      "aankomst": "08:42"
+      "aankomst": "08:42",
+      "van": "Assendelft Station",
+      "naar": "Zaandam Station"
     },
+
     {
+      "type": "rit",
       "lijn": "111",
       "omloop": "1031",
-      "van": "Zaandam Station",
-      "naar": "Amsterdam Noord",
       "vertrek": "08:45",
-      "aankomst": "09:24"
+      "aankomst": "09:24",
+      "van": "Zaandam Station",
+      "naar": "Amsterdam Noord"
     },
+
     {
+      "type": "mat",
+      "vertrek": "09:24",
+      "aankomst": "09:34",
+      "van": "Amsterdam Noord",
+      "naar": "Zaandam Garage"
+    },
+
+    {
+      "type": "stekkeren",
+      "van": "09:34",
+      "naar": "09:36"
+    },
+
+    {
+      "type": "tekst",
+      "omschrijving": "Meenemen Aflosauto"
+    },
+
+    {
+      "type": "pauze",
+      "vertrek": "09:36",
+      "aankomst": "10:10"
+    },
+
+    {
+      "type": "opstaptijd",
+      "van": "10:10",
+      "naar": "10:15"
+    },
+
+    {
+      "type": "mat",
+      "voertuig": "MAT 8006",
+      "vertrek": "10:15",
+      "aankomst": "10:18",
+      "van": "Zaandam Garage",
+      "naar": "Zaandam Vlinder"
+    },
+
+    {
+      "type": "tekst",
+      "omschrijving": "Aflosauto voor dienst 4405"
+    },
+
+    {
+      "type": "tekst",
+      "omschrijving": "Elektrisch 13,5m R-net van dienst 4019"
+    },
+
+    {
+      "type": "rit",
       "lijn": "395",
       "omloop": "1803",
-      "van": "Zaandam Vlinder",
-      "naar": "Zaandam ZMC",
+      "ritnummer": "1041",
       "vertrek": "10:20",
-      "aankomst": "10:29"
+      "aankomst": "10:29",
+      "van": "Zaandam Vlinder",
+      "naar": "Zaandam ZMC"
     },
+
     {
+      "type": "mat",
+      "vertrek": "10:29",
+      "aankomst": "10:32",
+      "van": "Zaandam ZMC",
+      "naar": "Zaandam ZMC"
+    },
+
+    {
+      "type": "rit",
       "lijn": "395",
       "omloop": "1050",
-      "van": "Zaandam ZMC",
-      "naar": "Amsterdam Sloterdijk",
       "vertrek": "10:40",
-      "aankomst": "11:03"
+      "aankomst": "11:03",
+      "van": "Zaandam ZMC",
+      "naar": "Amsterdam Sloterdijk"
     },
+
     {
+      "type": "rit",
       "lijn": "395",
       "omloop": "1049",
-      "van": "Amsterdam Sloterdijk",
-      "naar": "Zaandam ZMC",
       "vertrek": "11:06",
-      "aankomst": "11:29"
+      "aankomst": "11:29",
+      "van": "Amsterdam Sloterdijk",
+      "naar": "Zaandam ZMC"
     },
+
     {
+      "type": "mat",
+      "vertrek": "11:29",
+      "aankomst": "11:32",
+      "van": "Zaandam ZMC",
+      "naar": "Zaandam ZMC"
+    },
+
+    {
+      "type": "rit",
       "lijn": "395",
       "omloop": "1058",
-      "van": "Zaandam ZMC",
-      "naar": "Amsterdam Sloterdijk",
       "vertrek": "11:40",
-      "aankomst": "12:03"
+      "aankomst": "12:03",
+      "van": "Zaandam ZMC",
+      "naar": "Amsterdam Sloterdijk"
     },
+
     {
+      "type": "rit",
       "lijn": "395",
       "omloop": "1057",
-      "van": "Amsterdam Sloterdijk",
-      "naar": "Zaandam Vlinder",
       "vertrek": "12:06",
-      "aankomst": "12:18"
+      "aankomst": "12:18",
+      "van": "Amsterdam Sloterdijk",
+      "naar": "Zaandam Vlinder"
+    },
+
+    {
+      "type": "tekst",
+      "omschrijving": "Elektrisch 13,5m R-net voor dienst 4401"
+    },
+
+    {
+      "type": "tekst",
+      "omschrijving": "Aflosauto van dienst 4309"
+    },
+
+    {
+      "type": "mat",
+      "voertuig": "MAT 8003",
+      "vertrek": "12:20",
+      "aankomst": "12:23",
+      "van": "Zaandam Vlinder",
+      "naar": "Zaandam Garage"
+    },
+
+    {
+      "type": "afstaptijd",
+      "van": "12:23",
+      "naar": "12:25"
     }
+
   ]
-}
 }
 
