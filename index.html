@@ -4,48 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EBS DienstApp</title>
+
+<style>
+body{
+  font-family:Arial,sans-serif;
+  max-width:600px;
+  margin:auto;
+  padding:20px;
+}
+input,button{
+  padding:10px;
+  font-size:16px;
+}
+.card{
+  border:1px solid #ccc;
+  border-radius:10px;
+  padding:15px;
+  margin-top:20px;
+}
+</style>
+
 </head>
 <body>
 
-<h1>EBS DienstApp</h1>
+<h1>🚍 EBS DienstApp</h1>
 
-<input id="dienstnummer" placeholder="Voer dienstnummer in">
+<input id="dienstnummer" placeholder="Bijv. 4001">
 <button onclick="zoekDienst()">Zoek</button>
 
 <div id="resultaat"></div>
 
 <script>
-const diensten = {
-  "4001": {
-    start: "04:34",
-    einde: "12:25"
-  },
-  "5001": {
-    start: "05:35",
-    einde: "11:51"
-  },
-  "6015": {
-    start: "07:02",
-    einde: "15:50"
-  }
-};
+
+let diensten = {};
+
+async function laadDiensten() {
+    const response = await fetch("diensten.json");
+    diensten = await response.json();
+}
+
+laadDiensten();
 
 function zoekDienst() {
-  const nummer =
-    document.getElementById("dienstnummer").value;
 
-  const dienst = diensten[nummer];
+    const nummer =
+      document.getElementById("dienstnummer").value;
 
-  if (dienst) {
-    document.getElementById("resultaat").innerHTML =
-      "<h2>Dienst " + nummer + "</h2>" +
-      "<p>Start: " + dienst.start + "</p>" +
-      "<p>Einde: " + dienst.einde + "</p>";
-  } else {
-    document.getElementById("resultaat").innerHTML =
-      "<p>Dienst niet gevonden</p>";
-  }
+    const dienst = diensten[nummer];
+
+    if(dienst){
+
+        document.getElementById("resultaat").innerHTML =
+        `
+        <div class="card">
+            <h2>Dienst ${nummer}</h2>
+            <p><b>Start:</b> ${dienst.start}</p>
+            <p><b>Einde:</b> ${dienst.einde}</p>
+        </div>
+        `;
+
+    }else{
+
+        document.getElementById("resultaat").innerHTML =
+        `
+        <div class="card">
+            Dienst niet gevonden
+        </div>
+        `;
+
+    }
 }
+
 </script>
 
 </body>
