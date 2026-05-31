@@ -1,24 +1,71 @@
 {
   "4001": {
-    "start": "04:34",
-    "einde": "12:25",
-    "voertuig": "Elektrisch 12,2m M-net",
-    "podwagen": false,
-    "pauzes": [
-      "06:18-06:51",
-      "09:36-10:10"
-    ],
-    "ritten": [
-      {"lijn":"111","vertrek":"05:14","aankomst":"06:18"},
-      {"lijn":"69","vertrek":"06:51","aankomst":"07:43"},
-      {"lijn":"69","vertrek":"07:45","aankomst":"08:42"},
-      {"lijn":"111","vertrek":"08:45","aankomst":"09:24"},
-      {"lijn":"395","vertrek":"10:20","aankomst":"10:29"},
-      {"lijn":"395","vertrek":"10:40","aankomst":"11:03"},
-      {"lijn":"395","vertrek":"11:06","aankomst":"11:29"},
-      {"lijn":"395","vertrek":"11:40","aankomst":"12:03"},
-      {"lijn":"395","vertrek":"12:06","aankomst":"12:18"}
-    ]
+  "start": "04:34",
+  "einde": "12:25",
+  "voertuig": "Elektrisch 12,2m M-net",
+  "podwagen": false,
+
+  "pauzes": [
+    "06:18-06:51",
+    "09:36-10:10"
+  ],
+
+  "ritten": [
+    {
+      "lijn": "111",
+      "bestemming": "Amsterdam Centraal",
+      "vertrek": "05:14",
+      "aankomst": "06:18"
+    },
+    {
+      "lijn": "69",
+      "bestemming": "Station Sloterdijk",
+      "vertrek": "06:51",
+      "aankomst": "07:43"
+    },
+    {
+      "lijn": "69",
+      "bestemming": "Purmerend Tramplein",
+      "vertrek": "07:45",
+      "aankomst": "08:42"
+    },
+    {
+      "lijn": "111",
+      "bestemming": "Amsterdam Centraal",
+      "vertrek": "08:45",
+      "aankomst": "09:24"
+    },
+    {
+      "lijn": "395",
+      "bestemming": "Amsterdam Centraal",
+      "vertrek": "10:20",
+      "aankomst": "10:29"
+    },
+    {
+      "lijn": "395",
+      "bestemming": "Zaandam Station",
+      "vertrek": "10:40",
+      "aankomst": "11:03"
+    },
+    {
+      "lijn": "395",
+      "bestemming": "Amsterdam Centraal",
+      "vertrek": "11:06",
+      "aankomst": "11:29"
+    },
+    {
+      "lijn": "395",
+      "bestemming": "Zaandam Station",
+      "vertrek": "11:40",
+      "aankomst": "12:03"
+    },
+    {
+      "lijn": "395",
+      "bestemming": "Amsterdam Centraal",
+      "vertrek": "12:06",
+      "aankomst": "12:18"
+    }
+  ]
   },
 
   "4002": {
