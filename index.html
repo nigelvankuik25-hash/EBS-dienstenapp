@@ -75,18 +75,21 @@ function zoekDienst() {
     let rittenHtml = "";
       if(dienst.ritten){
 
-        rittenHtml =
-"<h3>🚌 Ritten</h3>" +
-"<table border='1' style='width:100%;border-collapse:collapse'>" +
-"<tr><th>Lijn</th><th>Bestemming</th><th>Vertrek</th><th>Aankomst</th><th>Duur</th></tr>"
-dienst.ritten.map(r =>
-`<tr>
-<td>${r.lijn}</td>
-<td>${r.bestemming || "-"}</td>
-<td>${r.vertrek}</td>
-<td>${r.aankomst}</td>
-<td>${berekenMinuten(r.vertrek, r.aankomst)} min</td>
-</tr>`
+dienst.ritten.forEach(r => {
+
+    rittenHtml += `
+    <tr>
+        <td>${r.lijn}</td>
+        <td>${r.omloop || "-"}</td>
+        <td>${r.van || "-"}</td>
+        <td>${r.naar || "-"}</td>
+        <td>${r.vertrek}</td>
+        <td>${r.aankomst}</td>
+        <td>${berekenMinuten(r.vertrek, r.aankomst)} min</td>
+    </tr>
+    `;
+
+});
 ).join("") +
 "</table>";
       }
